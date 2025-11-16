@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="The best local restaurants and takeaways are here to deliver. Order on Plate-Parcel today!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plate-Parcel - Food Delivery</title>
+    <!-- Modern Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Montserrat', Arial, sans-serif;
+        margin: 0;
+        background: linear-gradient(120deg,#eafaf9 38%, #f7f7f7 100%);
+        color: #222;
+      }
+      .header-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        padding: 18px 32px;
+        position: relative;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 2rem;
+        font-weight: bold;
+        color: #00CDBC;
+      }
+      .logo img {
+        height: 38px;
+        width: 48px;
+        border-radius: 5%;
+      }
+      .nav {
+        display: flex;
+        gap: 26px;
+      }
+      .nav a, .nav button {
+        background: #fff;
+        border: 1.5px solid #00CDBC;
+        border-radius: 5%;
+        padding: 10px 22px;
+        font-size: 1rem;
+        color: #00CDBC;
+        font-weight: 600;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+      }
+      .nav a:hover, .nav button:hover {
+        background: #00CDBC;
+        color: #fff;
+      }
+      .main-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 38px 16px 0 16px;
+      }
+      .signin-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+        padding-bottom: 20px;
+      }
+      .login-card {
+        background: #fff;
+        border-radius: 5px;
+        padding: 38px 32px;
+        width: 370px;
+        min-width: 280px;
+      }
+      .login-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 23px;
+        color: #00b0a9;
+        font-weight: 700;
+      }
+      .btn-signin {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 14px;
+        width: 100%;
+        border-radius: 7px;
+        font-size: 1.08rem;
+        cursor: pointer;
+        height: 48px;
+        border: none;
+        font-weight: 600;
+      }
+      .btn-signin img {
+        width: 22px;
+        height: 22px;
+      }
+      #Facebook { background: #4c69ba; color: #fff; }
+      #Google { background: #fff; color: #222; border: 1.5px solid #ececec; }
+      #Google:hover { background: #f3f3f3;}
+      #Apple { background: black; color: #fff; }
+      #Email { background: #00ccbc; color: #fff; }
+      .login-card p {
+        font-size: 13px;
+        font-style: italic;
+        margin-top: 18px;
+        opacity: 0.8;
+      }
+      .promo-card {
+        background: linear-gradient(90deg,#00CDBC 70%, #33efd7 100%);
+        border-radius: 5px;
+        color: #fff;
+        padding: 38px 30px;
+        min-width: 340px;
+        max-width: 410px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .promo-card h2 {
+        margin: 0 0 18px 0;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      .promo-card .search-bar {
+        width: 100%;
+        display: flex;
+        margin-top: 19px;
+      }
+      .promo-card input {
+        flex: 1;
+        padding: 14px 14px;
+        border: 1.2px solid #00CDBC;
+        border-radius: 7px 0 0 7px;
+        font-size: 1rem;
+        outline: none;
+      }
+      .promo-card button {
+        padding: 0 32px;
+        background: #fff;
+        color: #00CDBC;
+        font-size: 1rem;
+        border: none;
+        border-radius: 0 7px 7px 0;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      .promo-card button:hover {
+        background: #222;
+        color: #fff;
+      }
+      .info-footer {
+        background: #2e3333;
+        padding: 48px 0 24px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+      }
+      .container {
+        border-radius: 10px;
+        background: #ffffff17;
+        color: white;
+        min-height: 260px;
+        min-width: 210px;
+        max-width: 250px;
+        margin: 18px 11px;
+        padding: 20px 14px 14px 26px;
+      }
+      .container h5 {
+        margin-bottom: 18px;
+        font-size: 1.15rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 9px;
+      }
+      .container ul {
+        list-style: none;
+        padding: 0;
+      }
+      .container li {
+        margin-bottom: 14px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .container li:hover {
+        text-decoration: underline;
+        color: #33efd7;
+      }
+      .play {
+        border: 1.5px solid #fff;
+        border-radius: 6px;
+        background-color: #222;
+        color: #fff;
+        font-size: 0.98rem;
+        text-align: center;
+        height: 46px;
+        width: 148px;
+        margin: 23px auto 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .play span {
+        font-weight: bold;
+        font-size: 1.05rem;
+      }
+      .icon-section {
+        width: 19px;
+        height: 19px;
+        opacity: 0.85;
+      }
+      @media (max-width: 900px) {
+        .header-bar { flex-direction: column; align-items: flex-start; gap:10px;}
+        .main-content { padding: 20px 5px;}
+        .signin-section { flex-direction: column;}
+        .promo-card, .login-card { margin-bottom: 21px;}
+        .info-footer { flex-direction: column; gap:3px;}
+        .container { margin-right: 0; margin-left: 0;}
+      }
+    </style>
+</head>
+<body>
+    <div class="header-bar">
+      <div class="logo">
+        <img src="logo.jpeg" alt="Plate-Parcel logo">
+        <span>Plate-Parcel</span>
+      </div>
+      <div class="nav">
+        <button id="menu">Partner with us</button>
+        <a href="#" aria-label="Sign up or log in">&#127968; Sign up or log in</a>
+        <a href="#" aria-label="Account">&#128100; Account</a>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="signin-section">
+        <div class="login-card">
+          <h3>Sign up or log in</h3>
+          <button type="button" class="btn-signin" id="Facebook">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook logo">
+            Continue with Facebook
+          </button>
+          <button type="button" class="btn-signin" id="Google">
+            <img src="https://www.svgrepo.com/show/355037/google.svg" alt="Google logo">
+            Continue with Google
+          </button>
+          <button type="button" class="btn-signin" id="Apple">
+            <img src="apple copy.jpeg" alt="Apple logo">
+            Continue with Apple
+          </button>
+          <hr>
+          <button type="button" class="btn-signin" id="Email">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Email icon">
+            Continue with Email
+          </button>
+          <p>
+            By continuing you agree to our T&Cs. Please also check out our Privacy Policy. We use your data to offer you a personalised experience and to better understand and improve our services. For more information see here.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-footer">
+      <div class="container">
+        <h5 class="org">Discover Plate-Parcel</h5>
+        <ul>
+          <li>Investors</li>
+          <li>About us</li>
+          <li>Takeaway</li>
+          <li>Gift Cards</li>
+          <li>Plate-Parcel Students</li>
+          <li>Careers</li>
+          <li>Restaurant signup</li>
+          <li>Become a rider</li>
+        </ul>
+      </div>
+      <div class="container">
+        <h5 class="org">Legal</h5>
+        <ul>
+          <li>Terms and conditions</li>
+          <li>Privacy</li>
+          <li>Cookies</li>
+          <li>Tax Strategy</li>
+          <li>Modern Slavery Statement</li>
+          <li>Public Authority Requests</li>
+        </ul>
+      </div>
+      <div class="container">
+        <h5 class="org">Help</h5>
+        <ul>
+          <li>Contact</li>
+          <li>FAQs</li>
+          <li>Cuisines</li>
+          <li>Brands</li>
+        </ul>
+      </div>
+      <div class="container">
+        <h5 class="org">Take Plate-Parcel with you</h5>
+        <div class="play">
+          Download on the <span>App Store</span>
+        </div>
+        <div class="play">
+          GET IT ON <span>Google Play</span>
+        </div>
+      </div>
+    </div>
+    <footer style="background:#00CDBC;color:#fff;text-align:center;font-size:1.09rem;padding:22px 0;margin-top:0;">
+        &copy; 2025 Plate-Parcel – All Rights Reserved
+    </footer>
+</body>
+</html>

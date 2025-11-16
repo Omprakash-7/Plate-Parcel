@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plate-Parcel - Food Delivery</title>
+    <style>
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            margin: 0;
+            background-color: white;
+            color: #222;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 28px;
+            background: #fff;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 22px;
+            color: #00CDBC;
+            font-weight: bold;
+            gap: 12px;
+        }
+        .nav {
+            display: flex;
+            gap: 18px;
+        }
+        .nav a, .nav button {
+            background: #fff;
+            border: 1.5px solid #00CDBC;
+            border-radius: 8px;
+            padding: 10px 22px;
+            font-size: 1rem;
+            color: #00CDBC;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .nav a:hover, .nav button:hover {
+            background: #00CDBC;
+            color: #fff;
+        }
+        .hero {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            background: url(b6.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 350px;
+            padding: 34px 0 24px 0;
+            box-sizing: border-box;
+        }
+        .hero-text {
+            flex: 1 1 340px;
+            max-width: 570px;
+            padding: 10px 48px;
+        }
+        .promo-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 38px 30px;
+            margin-bottom: 32px;
+        }
+        .promo-card h2 {
+            color: #222;
+            font-size: 2.2rem;
+            margin: 0 0 18px 0;
+            font-weight: 700;
+        }
+        .search-box {
+            background: #eafaf9;
+            border-radius: 14px;
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .search-label {
+            font-size: 1.15rem;
+            margin-bottom: 7px;
+            font-weight: 600;
+            color: #088;
+        }
+        .search-bar {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 0;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 15px 14px;
+            border: 1.2px solid #00CDBC;
+            border-radius: 7px 0 0 7px;
+            font-size: 1rem;
+            outline: none;
+        }
+        .search-bar button {
+            padding: 0 32px;
+            background: #00CDBC;
+            color: #fff;
+            font-size: 1rem;
+            border: none;
+            border-radius: 0 7px 7px 0;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .search-bar button:hover {
+            background: #049c8f;
+        }
+
+        /* FEATURE CARDS */
+        .features {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 36px 16px 0 16px;
+        }
+        .feature-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 28px 24px;
+            flex: 1 1 310px;
+            min-width: 280px;
+            margin: 18px 0;
+        }
+        .feature-card h3 {
+            margin-top: 0;
+            color: #00CDBC;
+            font-weight: 700;
+        }
+        .download-links a {
+            display: inline-block;
+            margin-right: 14px;
+            text-decoration: none;
+            color: #00CDBC;
+            font-weight: bold;
+            background: #eafaf9;
+            padding: 8px 15px;
+            border-radius: 6px;
+            margin-top: 12px;
+        }
+        .download-links a:hover {
+            background: #00CDBC;
+            color: #fff;
+        }
+
+        .meal-deal {
+            background: linear-gradient(90deg, #00ccbc 66%, #64ffe7 100%);
+            color: #fff;
+            padding: 22px 18px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            margin-top: 7px;
+            font-weight: 500;
+            box-shadow: 0 1px 8px rgba(0,205,188,0.08);
+        }
+        .meal-deal a {
+            color: #ffe;
+            text-decoration: underline;
+        }
+
+        /* ACTION CARDS */
+        .actions-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            gap: 22px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 38px 16px;
+        }
+        .action-card {
+            background: #f9fcfb;
+            min-width: 220px;
+            flex: 1 1 260px;
+            max-width: 260px;
+            padding: 24px;
+            border-radius: 13px;
+            text-align: left;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .action-card h3 {
+            color: #00CDBC;
+            font-weight: 700;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #00CDBC;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 17px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .btn:hover {
+            background: #049c8f;
+        }
+        /* FOOTER */
+        footer {
+            background: #00CDBC;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 1rem;
+            margin-top: 34px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 860px) {
+            .features, .actions-grid, .hero {
+                flex-direction: column;
+                align-items: center;
+                gap: 0;
+            }
+            .hero-text {
+                padding: 16px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="logo.jpeg" alt="" height="37" width="48">
+            <span>Plate-Parcel</span>
+        </div>
+        <div class="nav">
+            <button id="menu">Partner with us</button>
+            <a href="log_in.html" target="_blank">&#127968; Sign up or log in</a>
+            <a href="#">&#128100; Account</a>
+        </div>
+    </div>
+    <div class="hero">
+        <div class="hero-text">
+            <div class="promo-card">
+                <h2>$25 off your first order when you spend $100</h2>
+                <div class="search-box">
+                    <div class="search-label">Enter a postcode to see what we deliver:</div>
+                    <form class="search-bar">
+                        <input type="text" placeholder="e.g. EC4R 3TE">
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="features">
+        <div class="feature-card">
+            <h3>Track orders to your door</h3>
+            <p>Get your favourite food delivered in a flash. You’ll see when your rider’s picked up your order, and be able to follow them along the way. You’ll get a notification when they’re nearby, too.</p>
+            <div class="download-links">
+                <a href="#">Download in App Store</a>
+                <a href="#">Get on Google Play</a>
+            </div>
+        </div>
+        <div class="feature-card">
+            <h3>Up to 25% off meal deals</h3>
+            <div class="meal-deal">
+                Need a midweek pick-me-up, a break from cooking for the family or just fancy your favourite restaurant?
+                <br>
+                <small>Subject to availability. Service/delivery fees apply. <a href="#">T&Cs</a></small>
+            </div>
+        </div>
+    </div>
+    <div class="actions-grid">
+        <div class="action-card">
+            <h3>Partner with us</h3>
+            <p>Join Plate-Parcel and reach more customers than ever. We handle delivery, so you can focus on the food.</p>
+            <a href="Partner.html" class="btn">Get Started</a>
+        </div>
+        <div class="action-card">
+            <h3>Ride with us</h3>
+            <p>The freedom to fit work around your life. Plus great fees, perks and discounts.</p>
+            <a href="Ride.html" class="btn">Get Started</a>
+        </div>
+        <div class="action-card">
+            <h3>Plate-Parcel for Work</h3>
+            <p>From team lunches to meal allowances for your late night workers, we've got your workplace meals covered.</p>
+            <a href="Work.html" class="btn">Get Started</a>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 Plate-Parcel – All Rights Reserved
+    </footer>
+</body>
+</html>
