@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plate-Parcel for Work</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Montserrat', Arial, sans-serif;
@@ -139,19 +138,208 @@
             padding: 20px 0;
             font-size: 1rem;
             margin-top: 38px;
+        
         }
-        @media (max-width: 900px) {
-            .features-grid {
-                flex-direction: column;
-                align-items: center;
-            }
-            .stats-section {
-                flex-direction: column;
-                align-items: center;
-            }
-            .main-content {
-                padding: 22px 4vw;
-            }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="logo.jpeg" alt="" height="37" width="48">
+            <span>Plate-Parcel</span>
+        </div>
+    </div>
+    <div class="main-content">
+        <section class="hero-section">
+            <h1>Plate-Parcel for Work</h1>
+            <p>Make work life tastier with tailored meal solutions for your team. From office lunches to remote meal perks, Plate-Parcel brings variety and convenience to every workplace.</p>
+            <button class="cta-btn">Get Started for Work</button>
+        </section>
+        <section class="features-grid">
+            <div class="feature-card">
+                <h3>Custom Meal Programs</h3>
+                <p>Choose plans for daily, weekly, or special occasion meals. Set employee allowances and restrictions with ease.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Wide Restaurant Selection</h3>
+                <p>Access diverse cuisines from local favorites and top restaurants so there’s always something for everyone.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Centralized Billing</h3>
+                <p>Enjoy hassle-free invoices and payment—no more collecting receipts or reimbursement forms.</p>
+            </div>
+        </section>
+        <section class="stats-section">
+            <div class="stat">
+                4,000+
+                <small>companies served</small>
+            </div>
+            <div class="stat">
+                400,000+
+                <small>workplace meals delivered</small>
+            </div>
+            <div class="stat">
+                97%
+                <small>business satisfaction rate</small>
+            </div>
+        </section>
+        <section class="testimonials-section">
+            <div class="testimonial-card">
+                “With Plate-Parcel for Work, team lunches are always seamless. Our staff love the variety, and arranging meals takes just minutes!”
+                <span>— Ananya, Ops Manager</span>
+            </div>
+            <div class="testimonial-card">
+                “Great support and easy billing have taken the stress out of feeding our remote teams. Highly recommend Plate-Parcel for any business.”
+                <span>— Michael, HR Lead</span>
+            </div>
+        </section>
+    </div>
+    <div class="footer">
+        &copy; 2025 Plate-Parcel – All Rights Reserved
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plate-Parcel for Work</title>
+    <style>
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            margin: 0;
+            background: #f7f7f7;
+            color: #222;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 22px 28px;
+            background: #fff;
+            border-bottom: 1px solid #e2e2e2;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 22px;
+            color: #00CDBC;
+            font-weight: bold;
+            gap: 12px;
+        }
+        .main-content {
+            max-width: 1100px;
+            margin: 40px auto 0 auto;
+            background: #fff;
+            border-radius: 18px;
+            padding: 40px 28px 32px 28px;
+        }
+        .hero-section {
+            text-align: center;
+            margin-bottom: 34px;
+        }
+        .hero-section h1 {
+            color: #00CDBC;
+            font-size: 2.4rem;
+            margin: 0 0 12px 0;
+            font-weight: 700;
+        }
+        .hero-section p {
+            font-size: 1.15rem;
+            color: #333;
+            margin-bottom: 14px;
+        }
+        .cta-btn {
+            background: #00CDBC;
+            color: #fff;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.13rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        .cta-btn:hover {
+            background: #049c8f;
+        }
+        .features-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: space-around;
+            margin-bottom: 22px;
+        }
+        .feature-card {
+            background: #eafaf9;
+            flex: 1 1 290px;
+            border-radius: 13px;
+            padding: 36px 24px;
+            min-width: 250px;
+            max-width: 310px;
+            text-align: center;
+        }
+        .feature-card h3 {
+            color: #00CDBC;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        .feature-card p {
+            color: #444;
+            font-size: 1rem;
+            margin: 0;
+        }
+        .stats-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 28px 0 32px 0;
+        }
+        .stat {
+            background: #fff;
+            border: 1.5px solid #00CDBC;
+            color: #00CDBC;
+            border-radius: 11px;
+            text-align: center;
+            padding: 24px 18px;
+            min-width: 170px;
+            font-size: 1.7rem;
+            font-weight: bold;
+        }
+        .stat small {
+            display: block;
+            color: #222;
+            font-size: 1rem;
+            font-weight: 400;
+            margin-top: 5px;
+        }
+        .testimonials-section {
+            margin-top: 20px;
+        }
+        .testimonial-card {
+            background: #f5fffe;
+            border-left: 4px solid #00CDBC;
+            padding: 18px 17px;
+            margin-bottom: 13px;
+            border-radius: 7px;
+            font-style: italic;
+        }
+        .testimonial-card span {
+            display: block;
+            margin-top: 10px;
+            color: #088;
+            font-weight: bold;
+            font-style: normal;
+        }
+        .footer {
+            background: #00CDBC;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 1rem;
+            margin-top: 38px;
+        
         }
     </style>
 </head>
