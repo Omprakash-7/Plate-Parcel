@@ -10,7 +10,6 @@
             font-family: 'Montserrat', Arial, sans-serif;
             margin: 0;
             background-color: white;
-            color: #222;
         }
         .header {
             display: flex;
@@ -29,14 +28,14 @@
         }
         .nav {
             display: flex;
-            gap: 18px;
+            gap: 14px;
         }
         .nav a, .nav button {
             background: #fff;
             border: 1.5px solid #00CDBC;
             border-radius: 8px;
             padding: 10px 22px;
-            font-size: 1rem;
+            font-size: 16px;
             color: #00CDBC;
             font-weight: 600;
             text-decoration: none;
@@ -100,14 +99,12 @@
             padding: 15px 14px;
             border: 1.2px solid #00CDBC;
             border-radius: 7px 0 0 7px;
-            font-size: 1rem;
-            outline: none;
         }
         .search-bar button {
             padding: 0 32px;
             background: #00CDBC;
             color: #fff;
-            font-size: 1rem;
+            font-size: 16px;
             border: none;
             border-radius: 0 7px 7px 0;
             cursor: pointer;
@@ -116,8 +113,6 @@
         .search-bar button:hover {
             background: #049c8f;
         }
-
-        /* FEATURE CARDS */
         .features {
             max-width: 1100px;
             margin: 0 auto;
@@ -170,8 +165,6 @@
             color: #ffe;
             text-decoration: underline;
         }
-
-        /* ACTION CARDS */
         .actions-grid {
             max-width: 1100px;
             margin: 0 auto;
@@ -182,7 +175,7 @@
             padding: 38px 16px;
         }
         .action-card {
-            background: #f9fcfb;
+            background: #eafaf9;
             min-width: 220px;
             flex: 1 1 260px;
             max-width: 260px;
@@ -212,7 +205,6 @@
         .btn:hover {
             background: #049c8f;
         }
-        /* FOOTER */
         footer {
             background: #00CDBC;
             color: #fff;
@@ -221,24 +213,12 @@
             font-size: 1rem;
             margin-top: 34px;
         }
-
-        /* RESPONSIVE */
-        @media (max-width: 860px) {
-            .features, .actions-grid, .hero {
-                flex-direction: column;
-                align-items: center;
-                gap: 0;
-            }
-            .hero-text {
-                padding: 16px 12px;
-            }
-        }
     </style>
 </head>
 <body>
     <div class="header">
         <div class="logo">
-            <img src="logo.jpeg" alt="" height="37" width="48">
+            <img src="logo.jpeg" height="37" width="48">
             <span>Plate-Parcel</span>
         </div>
         <div class="nav">
